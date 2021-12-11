@@ -1,8 +1,30 @@
 package linkedlist
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
+}
+
+func run() {
+	l1 := &ListNode{
+		Val: 5,
+		Next: &ListNode{
+			Val: 3,
+			Next: &ListNode{
+				Val: 0,
+			},
+		},
+	}
+	l2 := &ListNode{
+		Val: 5,
+		Next: &ListNode{
+			Val: 1,
+		},
+	}
+	res := AddTwoNumbers(l1, l2)
+	fmt.Printf("%#v", res)
 }
 
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
